@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pyodizer - A Python-based privacy and security configuration manager">
+    <title>Pyodizer - Python Privacy Configurator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #34495e;
+        }
+        .code-block {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover, .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        #subscribe-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Pyodizer</h1>
+    <p>A Python-based privacy and security configuration manager</p>
+</header>
+
+<section>
+    <h2>What is Pyodizer?</h2>
+    <p>Pyodizer is a Python script designed to enhance privacy and security by modifying key configurations on your device. It anonymizes device information, blocks external access, and enhances encryption, making your setup more secure.</p>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li><strong>Device Anonymization:</strong> Randomizes the MAC address to prevent device tracking.</li>
+        <li><strong>IP Address Management:</strong> Blocks external IP access by setting IPv4 and IPv6 addresses to localhost.</li>
+        <li><strong>Firewall Rules:</strong> Configures firewall rules to block unwanted traffic such as HTTP, HTTPS, and ICMP.</li>
+        <li><strong>DNS & Hostname Configuration:</strong> Ensures DNS and hostname are set to localhost for enhanced privacy.</li>
+        <li><strong>Telemetry Disabled:</strong> Disables telemetry to prevent data collection.</li>
+        <li><strong>Encryption:</strong> Enables AES-256 encryption to secure communications and data.</li>
+    </ul>
+
+    <h2>Commercial Use</h2>
+    <p>Pyodizer is free for personal and non-commercial use under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution NonCommercial ShareAlike 4.0 International License</a>. However, if you wish to use Pyodizer for commercial purposes, you must maintain an active subscription.</p>
+    <button id="subscribe-button" onclick="document.getElementById('subscribeModal').style.display='block'">Subscribe for Commercial Use</button>
+
+    <div id="subscribeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('subscribeModal').style.display='none'">&times;</span>
+            <h2>Commercial Subscription Terms</h2>
+            <p>By subscribing, you are granted permission to use Pyodizer for commercial purposes as long as your subscription remains active. The subscription covers one user or organization per account. All commercial subscribers must attribute Pyodizer in any product or service that uses it.</p>
+
+            <!-- PayPal Smart Subscribe Button -->
+           <div id="paypal-button-container-P-6A3739048T916764SM4A2QMA"></div>
+           
+<script src="https://www.paypal.com/sdk/js?client-id=AcP-YPqYFUIzxu_yxeu1ohYtJ68MdR1XsNiAZmGNVNVBG7Mb5RXlzMx_RfXXTRWE99flaP3gZeGmmfjz&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-6A3739048T916764SM4A2QMA'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-6A3739048T916764SM4A2QMA'); // Renders the PayPal button
+</script>
+</section>
+
+<footer>
+    <p>Pyodizer is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution NonCommercial ShareAlike 4.0 International License</a>.</p>
+    <p><strong>Disclaimer:</strong> Pyodizer is provided "as-is" without any warranties, express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose. By using Pyodizer, you assume all risks associated with its use, including any loss of data or damage to your device. The author assumes no liability for any misuse or failure of the software, nor for any legal disputes arising from its commercial use.</p>
+</footer>
+
+<script>
+    // Close the modal when clicking outside of it
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('subscribeModal')) {
+            document.getElementById('subscribeModal').style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
