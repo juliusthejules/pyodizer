@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDS Anonymizer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.css">
+    <link rel="preload" href="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js" as="script">
+    <script src="https://pyscript.net/latest/pyscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+</head>
+<body>
+    <py-script>
+# config.py
+
+class Configuration:
+    def __init__(self):
+        # Device Anonymization Configuration
+        self.device = {
+            "macAddress": "00:00:00:00:00:00"  # Disable MAC address
+        }
+        
+        self.device = {
+            "macAddress": "RANDOMIZED"  # Set MAC address to a randomized value
+        }
+        
+        # IP Address Configuration
+        self.ipAddress = {
+            "ip4": "0.0.0.0"  # Block all external IPv4 access
+        }
+        self.ipAddress = {
+            "ip4": "127.0.0.1"  # Set IPv4 to localhost
+        }
+        self.ipAddress = {
+            "ip6": "::"  # Block all external IPv6 access
+        }
+        
+        self.ipAddress = {
+            "ip6": "::1"  # Set IPv6 to localhost
+        }
+
+        # Firewall Rules Configuration
+        self.firewallRules = [
+            {
+                "deny": True,
+                "port": 80,  # Block HTTP traffic
+                "protocol": "TCP",
+            },
+            {
+                "deny": True,
+                "port": 443,  # Block HTTPS traffic
+                "protocol": "TCP",
+            },
+            { 
+                "deny": True,
+                "port": 1194,  # Block OpenVPN traffic
+                "protocol": "UDP",
+            },
+            {
+                "deny": True,
+                "port": 1,  # Block new pings (ICMP)
+                "protocol": "ICMP",
+            },
+        ]
+
+        # Telemetry Configuration
+        self.telemetry = {
+            "enabled": False  # Telemetry is disabled by default
+        }
+
+        # Hostname Configuration
+        self.hostname = {
+            "localhost"  # Set hostname to localhost
+         }
+         
+        # DNS Configuration
+        self.dns = {
+            "primary": "127.0.0.1",  # Primary DNS set to localhost
+            "secondary": "::1"  # Secondary DNS set to localhost IPv6
+        }
+
+        # Encryption Configuration
+        self.encryption = {
+            "method": "AES-256",  # Encryption method specified
+            "enable": True  # Encryption is enabled
+        }
+
+# Success message
+    print("Configurations applied successfully!")  # Notify that configurations have been applied
+    </py-script>
+    
+ <script>
+    async function loadPyodideAndRun() {
+        let pyodide = await loadPyodide();
+
+        const pythonCode = `
+class Configuration:
+    def __init__(self):
+        # Device Anonymization Configuration
+        self.device = {
+            "macAddress": "RANDOMIZED"
+        }
+        
+        self.ipAddress = {
+            "ip4": "127.0.0.1",
+            "ip6": "::1"
+        }
+        
+        self.firewallRules = [
+            {"deny": True, "port": 80, "protocol": "TCP"},
+            {"deny": True, "port": 443, "protocol": "TCP"},
+            {"deny": True, "port": 1194, "protocol": "UDP"},
+            {"deny": True, "port": 1, "protocol": "ICMP"}
+        ]
+
+        self.telemetry = {
+            "enabled": False
+        }
+
+        self.hostname = "localhost"
+         
+        self.dns = {
+            "primary": "127.0.0.1",
+            "secondary": "::1"
+        }
+
+        self.encryption = {
+            "method": "AES-256",
+            "enable": True
+        }
+
+# Success message
+print("Configurations applied successfully!")
+        `;
+
+        await pyodide.runPython(pythonCode);
+    }
+
+    loadPyodideAndRun();
+</script>
+</body>
+</html>
