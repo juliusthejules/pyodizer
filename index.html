@@ -133,6 +133,25 @@ print("Configurations applied successfully!")
 
     loadPyodideAndRun();
      </script>
+
+    <!--PWA Begin-->
+    <link rel="manifest" href="./app.webmanifest">
+<link rel="icon" sizes="192x192" href="./icon-192x192.png">
+<link rel="icon" sizes="256x256" href="./icon-256x256.png">
+<link rel="icon" sizes="384x384" href="./icon-384x384.png">
+<link rel="icon" sizes="512x512" href="./icon-512x512.png">
+
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js').then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(error) {
+            console.log('ServiceWorker registration failed: ', error);
+        });
+    }
+    </script>
+<!--PWA End-->
+
 </head>
 <body>
 
