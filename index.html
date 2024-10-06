@@ -81,6 +81,58 @@
             border-radius: 5px;
         }
     </style>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+
+     <script>
+    async function loadPyodideAndRun() {
+        let pyodide = await loadPyodide();
+
+        const pythonCode = `
+class Configuration:
+    def __init__(self):
+        # Device Anonymization Configuration
+        self.device = {
+            "macAddress": "RANDOMIZED"
+        }
+        
+        self.ipAddress = {
+            "ip4": "127.0.0.1",
+            "ip6": "::1"
+        }
+        
+        self.firewallRules = [
+            {"deny": True, "port": 80, "protocol": "TCP"},
+            {"deny": True, "port": 443, "protocol": "TCP"},
+            {"deny": True, "port": 1194, "protocol": "UDP"},
+            {"deny": True, "port": 1, "protocol": "ICMP"}
+        ]
+
+        self.telemetry = {
+            "enabled": False
+        }
+
+        self.hostname = "localhost"
+         
+        self.dns = {
+            "primary": "127.0.0.1",
+            "secondary": "::1"
+        }
+
+        self.encryption = {
+            "method": "AES-256",
+            "enable": True
+        }
+
+# Success message
+print("Configurations applied successfully!")
+        `;
+
+        await pyodide.runPython(pythonCode);
+    }
+
+    loadPyodideAndRun();
+     </script>
 </head>
 <body>
 
