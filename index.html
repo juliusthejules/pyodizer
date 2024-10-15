@@ -120,35 +120,52 @@ class Configuration:
     def __init__(self):
         # Device Anonymization Configuration
         self.device = {
-            "macAddress": "RANDOMIZED"
+            "macAddress": "00:00:00:00:00:00"  # Disable MAC address
         }
-        
+        self.device = {
+            "macAddress": "RANDOMIZED"  # Set MAC address to a randomized value
+        }
+
+        # IP Address Configuration
         self.ipAddress = {
-            "ip4": "127.0.0.1",
-            "ip6": "::1"
+            "ip4": "0.0.0.0"  # Block all external IPv4 access
         }
-        
+        self.ipAddress = {
+            "ip4": "127.0.0.1"  # Set IPv4 to localhost
+        }
+        self.ipAddress = {
+            "ip6": "::"  # Block all external IPv6 access
+        }
+        self.ipAddress = {
+            "ip6": "::1"  # Set IPv6 to localhost
+        }
+
+        # Firewall Rules Configuration
         self.firewallRules = [
-            {"deny": True, "port": 80, "protocol": "TCP"},
-            {"deny": True, "port": 443, "protocol": "TCP"},
-            {"deny": True, "port": 1194, "protocol": "UDP"},
-            {"deny": True, "port": 1, "protocol": "ICMP"}
+            {"deny": True, "port": 80, "protocol": "TCP"},  # Block HTTP traffic
+            {"deny": True, "port": 443, "protocol": "TCP"},  # Block HTTPS traffic
+            {"deny": True, "port": 1194, "protocol": "UDP"},  # Block OpenVPN traffic
+            {"deny": True, "port": 1, "protocol": "ICMP"}  # Block new pings (ICMP)
         ]
 
+        # Telemetry Configuration
         self.telemetry = {
-            "enabled": False
+            "enabled": False  # Telemetry is disabled by default
         }
 
-        self.hostname = "localhost"
-         
+        # Hostname Configuration
+        self.hostname = "localhost"  # Set hostname to localhost
+
+        # DNS Configuration
         self.dns = {
-            "primary": "127.0.0.1",
-            "secondary": "::1"
+            "primary": "127.0.0.1",  # Primary DNS set to localhost
+            "secondary": "::1"  # Secondary DNS set to localhost IPv6
         }
 
+        # Encryption Configuration
         self.encryption = {
-            "method": "AES-256",
-            "enable": True
+            "method": "AES-256",  # Encryption method specified
+            "enable": True  # Encryption is enabled
         }
 
 # Success message
