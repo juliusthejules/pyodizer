@@ -15,8 +15,7 @@ async function loadAttribution() {
         const creatorUrl = xmlDoc.getElementsByTagName("url")[1].textContent;
         const licenseType = xmlDoc.getElementsByTagName("type")[0].textContent;
         const licenseUrl = xmlDoc.getElementsByTagName("url")[2].textContent;
-        const description = xmlDoc.getElementsByTagName("description")[0].textContent;
-
+        
         // Create the HTML content to display
         const attributionHtml = `
             <p>
@@ -24,7 +23,6 @@ async function loadAttribution() {
                 created by <a href="${creatorUrl}" target="_blank">${creatorName}</a>.
                 <br> Licensed under <a href="${licenseUrl}" target="_blank">${licenseType}</a>.
             </p>
-            <p>${description}</p>
         `;
 
         // Insert the attribution HTML into the page
