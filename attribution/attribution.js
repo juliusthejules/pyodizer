@@ -1,20 +1,38 @@
-// attribution.js
-fetch('./attribution/attribution.xml') // Path to the XML file
-    .then(response => response.text())
-    .then(data => {
+async function loadAttribution() {
+    try {
+        // Fetch the XML file asynchronously
+        const response = await fetch('./attribution/attribution.xml');
+        const data = await response.text();
+
+        // Parse the XML data
         const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(data, "text/xml");
+        const xmlDoc = parser.parseFromString(data, "application/xml");
 
-        const creator = xmlDoc.getElementsByTagName("creator")[0];
-        const name = creator.getElementsByTagName("name")[0].textContent;
-        const url = creator.getElementsByTagName("url")[0].textContent;
-        const licenseType = creator.getElementsByTagName("type")[0].textContent;
-        const licenseUrl = creator.getElementsByTagName("url")[1].textContent;
+        // Extract information from XML
+        const title = xmlDoc.getElementsByTagName("title")[0].textContent;
+        const projectUrl = xmlDoc.getElementsByTagName("url")[0].textContent;
+        const creatorName = xmlDoc.getElementsByTagName("name")[0].textContent;
+        const creatorUrl = xmlDoc.getElementsByTagName("url")[1].textContent;
+        const licenseType = xmlDoc.getElementsByTagName("type")[0].textContent;
+        const licenseUrl = xmlDoc.getElementsByTagName("url")[2].textContent;
+        const description = xmlDoc.getElementsByTagName("description")[0].textContent;
 
+        // Create the HTML content to display
         const attributionHtml = `
-            <p>Created by <a href="${url}" target="_blank">${name}</a> 
-            under <a href="${licenseUrl}" target="_blank">${licenseType}</a>.</p>
+            <p>
+                <a href="${projectUrl}" target="_blank">${title}</a> 
+                created by <a href="${creatorUrl}" target="_blank">${creatorName}</a>.
+                <br> Licensed under <a href="${licenseUrl}" target="_blank">${licenseType}</a>.
+            </p>
+            <p>${description}</p>
         `;
+
+        // Insert the attribution HTML into the page
         document.getElementById('attribution').innerHTML = attributionHtml;
-    })
-    .catch(error => console.error('Error fetching the attribution file:', error));
+    } catch (error) {
+        console.error('Error loading attribution:', error);
+    }
+}
+
+// Run the function after the DOM content is loaded
+document.addEventListener("DOMContentLoaded", loadAttribution);
