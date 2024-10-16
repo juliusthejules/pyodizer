@@ -286,30 +286,10 @@ print("Configurations applied successfully!")
     <p>Pyodizer&trade; is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution NonCommercial ShareAlike 4.0 International License</a>.</p>
     <p>Copyright &copy; 2024 Joseph D. Smith</p>
     <p><strong>Disclaimer:</strong> Pyodizer is provided "as-is" without any warranties, express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose. By using Pyodizer, you assume all risks associated with its use, including any loss of data or damage to your device. The author assumes no liability for any misuse or failure of the software, nor for any legal disputes arising from its commercial use.</p>
-
-    <!-- Share Button -->
-    <button id="shareButton" class="share-btn" align="center">Share Pyodizer</button>
-                
-<script>
-    document.getElementById("shareButton").addEventListener("click", async () => {
-        if (navigator.share) {
-            try {
-                await navigator.share({
-                    title: 'Pyodizer - Secure Your Devices',
-                    text: 'Check out Pyodizer! A powerful tool to secure your privacy and devices. Learn more here:',
-                    url: 'https://juliusthejules.github.io/pyodizer/'
-                });
-                console.log('Thanks for sharing!');
-            } catch (error) {
-                console.log('Error sharing:', error);
-            }
-        } else {
-            alert('Sorry, your browser does not support the Web Share API.');
-        }
-    });
-</script>
-
+<br><br>
+    
     <!-- User Agreements -->
+    
     <!-- Terms of Service Modal Trigger -->
 <button id="termsButton">Terms of Service</button>
 
@@ -347,6 +327,28 @@ print("Configurations applied successfully!")
         <p>By using Pyodizer, you consent to this Privacy Policy.</p>
     </div>
 </div>
+    <br><br>
+    <!-- Share Button -->
+    <button id="shareButton" class="share-btn" align="center">Share Pyodizer</button>
+                
+<script>
+    document.getElementById("shareButton").addEventListener("click", async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: 'Pyodizer - Secure Your Devices',
+                    text: 'Check out Pyodizer! A powerful tool to secure your privacy and devices. Learn more here:',
+                    url: 'https://juliusthejules.github.io/pyodizer/'
+                });
+                console.log('Thanks for sharing!');
+            } catch (error) {
+                console.log('Error sharing:', error);
+            }
+        } else {
+            alert('Sorry, your browser does not support the Web Share API.');
+        }
+    });
+</script>
 </footer>
             
             <!-- Modal for Subscription -->
