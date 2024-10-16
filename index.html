@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- SEO Meta Tags -->
     <meta name="application-name" content="Pyodizer">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pyodizer - A Python-based privacy and security configuration manager for robust and strong cybersecurity protection.">
+    <meta name="description" content="A Python-based privacy and security configuration manager for robust and strong cybersecurity protection.">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://juliusthejules.github.io/pyodizer/"/>
     <!-- OpenGraph Meta Tags -->
 <meta property="og:title" content="Pyodizer: Secure & Private Device Configuration Tool">
 <meta property="og:type" content="website">
@@ -22,9 +24,10 @@
 <meta name="twitter:image" content="https://juliusthejules.github.io/pyodizer/social.png">
 <meta name="twitter:url" content="https://juliusthejules.github.io/pyodizer/">
 
-<script type='application/ld+json'> 
+    <!-- JSON-LD-->
+<script type="application/ld+json">
 {
-  "@context": "http://www.schema.org",
+  "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Pyodizer - Python Privacy Configurator",
   "alternateName": "Pyodizer",
@@ -34,7 +37,9 @@
 </script>
     
  <title>Pyodizer - Python Privacy Configurator</title>
-        <style>
+
+    <!-- Stylesheets -->
+    <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -122,6 +127,7 @@
         }
     </style>
 
+    <!-- Pyodide for running Pyodizer -->
     <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
 
      <script>
@@ -191,7 +197,7 @@ print("Configurations applied successfully!")
     loadPyodideAndRun();
      </script>
 
-    <!--PWA Begin-->
+    <!-- PWA -->
 <link rel="manifest" href="./app.webmanifest">
 <link rel="icon" href="./favicon.ico" type="image/x-icon">
 <link rel="icon" sizes="192x192" href="./icon-192x192.png">
@@ -199,6 +205,7 @@ print("Configurations applied successfully!")
 <link rel="icon" sizes="384x384" href="./icon-384x384.png">
 <link rel="icon" sizes="512x512" href="./icon-512x512.png">
 
+    <!-- Register Service Worker -->
     <script>
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./sw.js').then(function(registration) {
@@ -208,16 +215,17 @@ print("Configurations applied successfully!")
         });
     }
     </script>
-<!--PWA End-->
 
 </head>
 <body>
 
+    <!-- Heading -->
 <header>
     <h1>Pyodizer&trade;</h1>
     <p>A Python-based privacy and security configuration manager</p>
 </header>
 
+    <!-- Main Section -->
 <section>
     <h2>What is Pyodizer?</h2>
     <p>Pyodizer is a Python script designed to enhance privacy and security by modifying key configurations on your device. It anonymizes device information, blocks external access, and enhances encryption, making your setup more secure.</p>
@@ -231,7 +239,8 @@ print("Configurations applied successfully!")
         <li><strong>Telemetry Disabled:</strong> Disables telemetry to prevent data collection.</li>
         <li><strong>Encryption:</strong> Enables AES-256 encryption to secure communications and data.</li>
     </ul>
-    
+
+    <!-- Subscription Service -->
     <h2>Commercial Use</h2>
     <p>Pyodizer is free for personal and non-commercial use under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener noreferrer">Creative Commons Attribution NonCommercial ShareAlike 4.0 International License</a>. However, if you wish to use Pyodizer for commercial purposes, you must maintain an active subscription.</p>
     <center><button id="subscribe-button" onclick="document.getElementById('subscribeModal').style.display='block'">Subscribe for Commercial Use</button></center>
@@ -267,12 +276,19 @@ print("Configurations applied successfully!")
 </script>
 </section>
 
+            <!-- Source Code Section -->
             <section>
                 <p align="center"><strong>View <a href="https://github.com/juliusthejules/pyodizer" rel="noopener noreferrer">Source Code</a></strong></p>
             </section>
 
-            <section>
-                <button id="shareButton" class="share-btn">Share Pyodizer</button>
+            <!-- Footer -->
+<footer>
+    <p>Pyodizer&trade; is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution NonCommercial ShareAlike 4.0 International License</a>.</p>
+    <p>Copyright &copy; 2024 Joseph D. Smith</p>
+    <p><strong>Disclaimer:</strong> Pyodizer is provided "as-is" without any warranties, express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose. By using Pyodizer, you assume all risks associated with its use, including any loss of data or damage to your device. The author assumes no liability for any misuse or failure of the software, nor for any legal disputes arising from its commercial use.</p>
+
+    <!-- Share Button -->
+    <button id="shareButton" class="share-btn" align="center">Share Pyodizer</button>
                 
 <script>
     document.getElementById("shareButton").addEventListener("click", async () => {
@@ -292,14 +308,9 @@ print("Configurations applied successfully!")
         }
     });
 </script>
-            </section>
-
-<footer>
-    <p>Pyodizer&trade; is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution NonCommercial ShareAlike 4.0 International License</a>.</p>
-    <p>Copyright &copy; 2024 Joseph D. Smith</p>
-    <p><strong>Disclaimer:</strong> Pyodizer is provided "as-is" without any warranties, express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose. By using Pyodizer, you assume all risks associated with its use, including any loss of data or damage to your device. The author assumes no liability for any misuse or failure of the software, nor for any legal disputes arising from its commercial use.</p>
 </footer>
 
+            <!-- Modal for Subscription -->
 <script>
     // Close the modal when clicking outside of it
     window.onclick = function(event) {
