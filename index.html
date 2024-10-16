@@ -98,6 +98,19 @@
             padding: 10px;
             margin-top: 20px;
         }
+            .share-btn {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .share-btn:hover {
+        background-color: #2980b9;
+    }
         #subscribe-button {
             background-color: #3498db;
             color: white;
@@ -256,6 +269,29 @@ print("Configurations applied successfully!")
 
             <section>
                 <p align="center"><strong>View <a href="https://github.com/juliusthejules/pyodizer" rel="noopener noreferrer">Source Code</a></strong></p>
+            </section>
+
+            <section>
+                <button id="shareButton" class="share-btn">Share Pyodizer</button>
+                
+<script>
+    document.getElementById("shareButton").addEventListener("click", async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: 'Pyodizer - Secure Your Devices',
+                    text: 'Check out Pyodizer! A powerful tool to secure your privacy and devices. Learn more here:',
+                    url: 'https://juliusthejules.github.io/pyodizer/'
+                });
+                console.log('Thanks for sharing!');
+            } catch (error) {
+                console.log('Error sharing:', error);
+            }
+        } else {
+            alert('Sorry, your browser does not support the Web Share API.');
+        }
+    });
+</script>
             </section>
 
 <footer>
