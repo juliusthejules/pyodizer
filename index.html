@@ -308,8 +308,47 @@ print("Configurations applied successfully!")
         }
     });
 </script>
-</footer>
 
+    <!-- User Agreements -->
+    <!-- Terms of Service Modal Trigger -->
+<button id="termsButton">Terms of Service</button>
+
+<!-- Terms of Service Modal -->
+<div id="termsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="document.getElementById('termsModal').style.display='none'">&times;</span>
+        <h2>Terms of Service</h2>
+        <p>By using Pyodizer, you agree to the following terms:</p>
+        <ul>
+            <li>You must be at least 13 years old to use this service.</li>
+            <li>You agree not to misuse Pyodizer or assist others in doing so.</li>
+            <li>Pyodizer is provided on an "as is" basis without warranties.</li>
+            <li>We reserve the right to modify or discontinue the service at any time.</li>
+            <li>Your use of Pyodizer constitutes acceptance of these terms.</li>
+        </ul>
+        <p>If you do not agree with these terms, you must not use Pyodizer.</p>
+    </div>
+</div>
+<!-- Privacy Policy Modal Trigger -->
+<button id="privacyButton">Privacy Policy</button>
+
+<!-- Privacy Policy Modal -->
+<div id="privacyModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="document.getElementById('privacyModal').style.display='none'">&times;</span>
+        <h2>Privacy Policy</h2>
+        <p>Your privacy is important to us. This policy outlines how we collect and use your information:</p>
+        <ul>
+            <li>We do not collect personal information unless explicitly provided.</li>
+            <li>Any data shared with us is used solely for improving the service.</li>
+            <li>We do not sell or share your personal information with third parties.</li>
+            <li>We may update this policy from time to time, and users will be notified of any significant changes.</li>
+        </ul>
+        <p>By using Pyodizer, you consent to this Privacy Policy.</p>
+    </div>
+</div>
+</footer>
+            
             <!-- Modal for Subscription -->
 <script>
     // Close the modal when clicking outside of it
@@ -320,5 +359,30 @@ print("Configurations applied successfully!")
     }
 </script>
 
+            <!-- Modals for User Agreements -->
+<script>
+    // Get the modals
+    var termsModal = document.getElementById("termsModal");
+    var privacyModal = document.getElementById("privacyModal");
+
+    // When the user clicks the button, open the respective modal
+    document.getElementById("termsButton").onclick = function() {
+        termsModal.style.display = "block";
+    }
+    
+    document.getElementById("privacyButton").onclick = function() {
+        privacyModal.style.display = "block";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == termsModal) {
+            termsModal.style.display = "none";
+        } else if (event.target == privacyModal) {
+            privacyModal.style.display = "none";
+        }
+    }
+</script>
+            
 </body>
 </html>
