@@ -22,9 +22,7 @@ The `attribution.xml` file contains the necessary attribution details:
             <url>https://creativecommons.org/licenses/by-nc-sa/4.0/</url>
         </license>
     </creator>
-    <description>
-        This XML file configures the attribution details for Pyodizer users.
-    </description>
+        <-- This XML file configures the attribution details for Pyodizer users. -->
 </attribution>
 ```
 
