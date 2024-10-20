@@ -21,11 +21,6 @@
       "sizes": "512x512",
       "src": "./icon-512x512.png",
       "type": "image/png"
-    },
-    {
-      "sizes": "48x48",
-      "src": "./favicon.ico",
-      "type": "image/x-icon"
     }
   ],
   "orientation": "portrait",
