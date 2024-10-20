@@ -9,7 +9,7 @@
 - **Firewall Rules**: Blocks critical ports like HTTP (80), HTTPS (443), OpenVPN (1194), and ICMP (1) to secure device communications.
 - **Telemetry**: Disabled by default to prevent data collection.
 - **Hostname & DNS**: Set to localhost to prevent external hostname resolution.
--  **Cookies & Cache**: Clears existing cookies, blocks new cookies, and browser cache is completely disabled to prevent even more forms of tracking.
+-  **Cookies**: Clears existing cookies and blocks new cookies to prevent even more forms of tracking.
 - **Encryption**: Uses AES-256 encryption to secure configurations.
 - **License**: Licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
