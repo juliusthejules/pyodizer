@@ -1,11 +1,11 @@
-# Attribution API Documentation for Pyodizer
+# Attribution Documentation for Pyodizer
 
 #### 1. **Overview**
-The Pyodizer Attribution API allows developers and users to automatically load and display the required attribution for using Pyodizer on their website or app. This is done by asynchronously fetching an XML configuration file and dynamically injecting attribution content into the webpage.
+The Pyodizer Attribution system allows developers and users to easily reuse and display the required attribution for using Pyodizer on their websites or apps. The attribution details are configured through an XML file that can be manually cloned and set up by users. By including the XML file and JavaScript, the attribution content can be dynamically injected into the webpage.
 
 #### 2. **`attribution.xml` Structure**
 
-The `attribution.xml` file contains the necessary attribution details:
+The `attribution.xml` file contains all necessary attribution details:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -22,23 +22,23 @@ The `attribution.xml` file contains the necessary attribution details:
             <url>https://creativecommons.org/licenses/by-nc-sa/4.0/</url>
         </license>
     </creator>
-        <-- This XML file configures the attribution details for Pyodizer users. -->
+    <!-- This XML file configures the attribution details for Pyodizer users. -->
 </attribution>
 ```
 
 **Fields:**
-- `<title>`: Name of the project (Pyodizer).
-- `<url>`: Link to Pyodizer’s GitHub Pages site.
+- `<title>`: The name of the project (Pyodizer).
+- `<url>`: A link to Pyodizer’s GitHub Pages site.
 - `<name>`: The creator’s name (Joseph D. Smith), which links to his GitHub profile.
-- `<license>`: License information with a link to the appropriate Creative Commons license.
+- `<license>`: License details, with a link to the Creative Commons license.
 
 ---
 
 #### 3. **JavaScript Integration**
 
-The JavaScript (`attribution.js`) file fetches and parses the XML file, then injects the attribution into the HTML dynamically. This ensures that if there are updates in the XML file, the attribution will update automatically.
+The provided JavaScript (`attribution.js`) file can be used to fetch the XML file and inject the attribution into your HTML dynamically.
 
-1. **Include the following `<div>` in your HTML where you want the attribution to appear:**
+1. **Include the following `<div>` where you want the attribution to appear:**
 
 ```html
 <div id="attribution"></div>
@@ -47,14 +47,28 @@ The JavaScript (`attribution.js`) file fetches and parses the XML file, then inj
 2. **Link to the JavaScript file asynchronously:**
 
 ```html
-<script src="https://juliusthejules.github.io/pyodizer/attribution/attribution.js" async></script>
+<script src="./attribution/attribution.js" async></script>
 ```
 
 ---
 
-#### 4. **Usage Example**
+#### 4. **Manual Setup for Cloning**
 
-Here is an example of how to use the Attribution API within your HTML:
+Because GitHub Pages does not natively support sending or receiving API endpoints, users will need to manually clone the `attribution.xml` and `attribution.js` files and host them on their own servers or web hosting solutions.
+
+1. Clone the necessary files from the repository.
+2. Upload the files to your own web host.
+3. Reference the JavaScript file from your hosted environment in your HTML file.
+
+```html
+<script src="your-host/attribution.js" async></script>
+```
+
+---
+
+#### 5. **Usage Example**
+
+Below is an example of how to use the attribution system within your HTML:
 
 ```html
 <!DOCTYPE html>
@@ -81,19 +95,19 @@ Here is an example of how to use the Attribution API within your HTML:
     </footer>
 
     <!-- Asynchronous loading of attribution -->
-    <script src="https://juliusthejules.github.io/pyodizer/attribution/attribution.js" async></script>
+    <script src="your-host/attribution.js" async></script>
 </body>
 </html>
 ```
 
 ---
 
-#### 5. **Asynchronous Updates**
+#### 6. **Updates Across Pages**
 
-With this approach, any future updates to the `attribution.xml` file (e.g., changes in licensing, creator information, or project details) will automatically reflect on the websites or applications using the API. There is no need for manual changes to the HTML code when the XML is updated.
+With this system, once set up, users can reuse the same attribution across multiple pages. Any changes to the XML file (e.g., updating the project details, license, or creator information) will reflect automatically across all pages where it’s implemented.
 
 ---
 
 ### **Conclusion**
 
-By using this Attribution API, you ensure that proper credit is given to the creator of Pyodizer while maintaining a clean and modern website structure. The async nature of the implementation allows for easy updates to attribution information, providing flexibility and ease of use for developers.
+By using this attribution system, you ensure proper credit is given to the creator of Pyodizer while maintaining a consistent and reusable setup across multiple pages. Although users need to manually set up the files, this solution provides flexibility and ease of updating attribution content.
