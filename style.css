@@ -91,7 +91,7 @@ button {
     width: 49.2%;
 }
 
-#subscribe-button, button {
+#subscribe-button {
             background-color: #3498db;
             color: white;
             border: none;
