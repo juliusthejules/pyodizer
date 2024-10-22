@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <!-- SEO Meta Tags -->
-    <meta name="application-name" content="Pyodizer">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A Python-based privacy and security configuration manager for robust and strong cybersecurity protection.">
@@ -39,96 +38,7 @@
     
  <title>Pyodizer - Python Privacy Configurator</title>
 
-    <!-- Stylesheets -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #34495e;
-        }
-        .code-block {
-            background-color: #ecf0f1;
-            padding: 10px;
-            border-left: 4px solid #3498db;
-            font-family: monospace;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .modal-content {
-            background-color: #fff;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-        }
-        .close {
-            color: #000;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover, .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        footer {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-            .share-btn {
-        background-color: #3498db;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-    .share-btn:hover {
-        background-color: #2980b9;
-    }
-        #subscribe-button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
-
-    <!-- Pyodide for running Pyodizer -->
+<!-- Pyodide for running Pyodizer -->
     <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
 
      <script>
@@ -229,6 +139,8 @@ print("Configurations applied successfully!")
                                   </script>
 
     <!-- PWA -->
+<meta name="application-name" content="Pyodizer">
+<link rel="stylesheet" href="./style.css">
 <link rel="manifest" href="./app.webmanifest">
 <link rel="icon" sizes="192x192" href="./icon-192x192.png">
 <link rel="icon" sizes="256x256" href="./icon-256x256.png">
