@@ -99,6 +99,7 @@ button {
             font-size: 16px;
             cursor: pointer;
             border-radius: 5px;
+            width: 100%;
 }   
 
  #subscribe-button, h2 {
@@ -106,7 +107,7 @@ text-align: center;
  }
 
             .share-btn {
-        background-color: #3498db;
+        background-color: green;
         color: white;
         border: none;
         padding: 10px 20px;
@@ -115,6 +116,7 @@ text-align: center;
         border-radius: 5px;
         transition: background-color 0.3s ease;
         text-align: center;
+        width: 100%;
    }
 
     .share-btn:hover {
