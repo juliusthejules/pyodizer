@@ -90,7 +90,7 @@ button {
     color: white;
     border-radius: 5px;
     padding: 15px;
-    width: 49.4%;
+    width: 47%;
 }
 
 #subscribe-button {
@@ -127,8 +127,7 @@ text-align: center;
 
     .agreements {
     background-color: lightgreen;
-    padding: 20px;
-    margin-top: 0;       
+    padding: 30px;     
     }
                
 .documentation {
