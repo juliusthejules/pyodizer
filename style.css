@@ -123,6 +123,13 @@ text-align: center;
         background-color: #2980b9;
     }
 
+    .agreements {
+            background-color: lightgreen;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: center;
+    }
+
 .documentation {
 margin-top: 5px;
 background-color: lightyellow;
