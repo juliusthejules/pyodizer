@@ -34,7 +34,7 @@
     "telemetry": {
         "enabled": false
     },
-    "hostname": "localhost"
+    "hostname": { "localhost"
 },
     "dns": {
         "primary": "127.0.0.1",
@@ -44,4 +44,3 @@
         "method": "AES-256",
         "enable": true
     }
-}
