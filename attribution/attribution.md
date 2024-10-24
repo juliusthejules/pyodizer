@@ -44,10 +44,10 @@ The provided JavaScript (`attribution.js`) file can be used to fetch the XML fil
 <div id="attribution"></div>
 ```
 
-2. **Link to the JavaScript file asynchronously:**
+2. **Link to the JavaScript file:**
 
 ```html
-<script src="./attribution/attribution.js" async></script>
+<script src="./attribution/attribution.js" type="text/javascript"></script>
 ```
 
 ---
@@ -61,7 +61,7 @@ Because GitHub Pages does not natively support sending or receiving API endpoint
 3. Reference the JavaScript file from your hosted environment in your HTML file.
 
 ```html
-<script src="your-host/attribution.js" async></script>
+<script src="./attribution/attribution.js" type="text/javascript"></script>
 ```
 
 ---
@@ -94,8 +94,8 @@ Below is an example of how to use the attribution system within your HTML:
         <p>&copy; 2024 Pyodizer by Joseph D. Smith</p>
     </footer>
 
-    <!-- Asynchronous loading of attribution -->
-    <script src="your-host/attribution.js" async></script>
+    <!-- Loading of attribution -->
+    <script src="./attribution/attribution.js" type="text/javascript"></script>
 </body>
 </html>
 ```
