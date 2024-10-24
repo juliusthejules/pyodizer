@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
    <!-- Load Pyodizer Scripts -->
-    <link rel="preload" as="script" href="https://juliusthejules.github.io/Pyodizer/pyodizer.py" type="text/x-python" crossorigin="anonymous">
-    <link rel="preload" as="fetch" href="https://juliusthejules.github.io/pyodizer/Pyodizer/config.json" type="application/json" crossorigin="anonymous">
-    <script src="https://juliusthejules.github.io/Pyodizer/pyodizer.py" type="text/x-python"></script>
+    <link rel="preload" as="script" href="./Pyodizer/pyodizer.py" type="text/x-python" crossorigin="anonymous">
+    <link rel="preload" as="fetch" href="./Pyodizer/config.json" type="application/json" crossorigin="anonymous">
+    <script src="./Pyodizer/pyodizer.py" type="text/x-python"></script>
+   <script src="./Pyodizer/config.json" type="application/json"></script>
     
     <!-- SEO Meta Tags -->
     <meta charset="UTF-8">
@@ -15,6 +16,7 @@
     <link rel="preload" as="script" href="./attribution/attribution.js" crossorigin="anonymous">
     <link rel="preload" as="fetch" href="./attribution/attribution.xml" crossorigin="anonymous">
     <link rel="sitemap" href="./sitemap.xml">
+   
     <!-- OpenGraph Meta Tags -->
 <meta property="og:title" content="Pyodizer: Secure & Private Device Configuration Tool">
 <meta property="og:type" content="website">
@@ -33,186 +35,6 @@
 
     <!-- Title of Page -->
  <title>Pyodizer - Python Privacy Configurator</title>
-
-<!-- Pyodide for running Pyodizer -->
-    <script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
-
-    <script>
-  async function runPythonCode() {
-    // Load Pyodide
-    let pyodide = await loadPyodide();
-    
-    // JSON configuration
-    const configJson = `
-    {
-      "device": {
-        "macAddress": "RANDOMIZED"
-      },
-      "ipAddress": {
-        "ip4": "127.0.0.1",
-        "ip6": "::1"
-      },
-      "firewallRules": [
-        {
-          "deny": true,
-          "port": 80,
-          "protocol": "TCP"
-        },
-        {
-          "deny": true,
-          "port": 443,
-          "protocol": "TCP"
-        },
-        {
-          "deny": true,
-          "port": 1194,
-          "protocol": "UDP"
-        },
-        {
-          "deny": true,
-          "port": 1,
-          "protocol": "ICMP"
-        }
-      ],
-      "telemetry": {
-        "enabled": false
-      },
-      "hostname": "localhost",
-      "dns": {
-        "primary": "127.0.0.1",
-        "secondary": "::1"
-      },
-      "encryption": {
-        "method": "AES-256",
-        "enable": true
-      }
-    }`;
-
-    // Python code
-    const pythonCode = `
-import json
-
-config = json.loads('''${configJson}''')
-
-class Device:
-    def __init__(self, mac_address):
-        self.mac_address = mac_address
-
-    def randomize_mac(self):
-        return "Randomizing MAC address..."
-
-    def disable_mac(self):
-        return "Disabling MAC address..."
-
-class IPAddress:
-    def __init__(self, ip4, ip6):
-        self.ip4 = ip4
-        self.ip6 = ip6
-
-    def block_external_ip4(self):
-        return "Blocking external IPv4 access..."
-
-    def set_ip4_to_localhost(self):
-        return "Setting IPv4 to localhost..."
-
-    def block_external_ip6(self):
-        return "Blocking external IPv6 access..."
-
-    def set_ip6_to_localhost(self):
-        return "Setting IPv6 to localhost..."
-
-class FirewallRules:
-    def __init__(self, rules):
-        self.rules = rules
-
-    def apply_rules(self):
-        actions = []
-        for rule in self.rules:
-            action = "Deny" if rule['deny'] else "Allow"
-            actions.append(f"{action}ing {rule['protocol']} traffic on port {rule['port']}")
-        return actions
-
-class Telemetry:
-    def __init__(self, enabled):
-        self.enabled = enabled
-
-    def disable_telemetry(self):
-        return "Disabling telemetry..."
-
-class Hostname:
-    def __init__(self, hostname):
-        self.hostname = hostname
-
-    def set_hostname(self):
-        return f"Setting hostname to {self.hostname}..."
-
-class DNS:
-    def __init__(self, primary, secondary):
-        self.primary = primary
-        self.secondary = secondary
-
-    def set_dns(self):
-        return f"Setting primary DNS to {self.primary} and secondary DNS to {self.secondary}..."
-
-class Encryption:
-    def __init__(self, method, enable):
-        self.method = method
-        self.enable = enable
-
-    def enable_encryption(self):
-        if self.enable:
-            return f"Enabling encryption using {self.method}..."
-
-# Create instances based on configuration
-device = Device(config['device']['macAddress'])
-ip_address = IPAddress(config['ipAddress']['ip4'], config['ipAddress']['ip6'])
-firewall_rules = FirewallRules(config['firewallRules'])
-telemetry = Telemetry(config['telemetry']['enabled'])
-hostname = Hostname(config['hostname'])
-dns = DNS(config['dns']['primary'], config['dns']['secondary'])
-encryption = Encryption(config['encryption']['method'], config['encryption']['enable'])
-
-# Apply configuration based on chosen values
-output = []
-if device.mac_address == "RANDOMIZED":
-    output.append(device.randomize_mac())
-elif device.mac_address == "00:00:00:00:00:00":
-    output.append(device.disable_mac())
-
-if ip_address.ip4 == "0.0.0.0":
-    output.append(ip_address.block_external_ip4())
-elif ip_address.ip4 == "127.0.0.1":
-    output.append(ip_address.set_ip4_to_localhost())
-
-if ip_address.ip6 == "::":
-    output.append(ip_address.block_external_ip6())
-elif ip_address.ip6 == "::1":
-    output.append(ip_address.set_ip6_to_localhost())
-
-output.extend(firewall_rules.apply_rules())
-
-if not telemetry.enabled:
-    output.append(telemetry.disable_telemetry())
-
-output.append(hostname.set_hostname())
-output.append(dns.set_dns())
-
-if encryption.enable:
-    output.append(encryption.enable_encryption())
-
-# Success message
-output.append("Configurations applied successfully!")
-output
-`;
-
-    // Run the Python code in Pyodide
-    let result = await pyodide.runPython(pythonCode);
-    console.log(result);  // Display output in console
-  }
-
-  runPythonCode();
-        </script>
-
     <!-- Clears & Blocks Cookies -->
      <script>
         // Function to delete all cookies
