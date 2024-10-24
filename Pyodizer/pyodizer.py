@@ -1,7 +1,7 @@
 import json
 
 # Load configuration from JSON file
-with open('config.json', 'r') as f:
+with open('./config.json', 'r') as f:
     config = json.load(f)
 
 class Device:
