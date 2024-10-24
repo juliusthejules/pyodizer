@@ -14,7 +14,7 @@ body {
 
         section {
             padding: 20px;
-            margin: 0;
+            margin-top: 0;
         }
 
         h1 {
@@ -126,7 +126,7 @@ text-align: center;
 
     .agreements {
     background-color: lightgreen;
-    padding: 20px;
+    padding: 15px;
     width: 100%;
     }
                
