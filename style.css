@@ -127,7 +127,8 @@ text-align: center;
 
     .agreements {
     background-color: lightgreen;
-    padding: 30px;     
+    padding: 30px;   
+    margin: 0;
     }
                
 .documentation {
