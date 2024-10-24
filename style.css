@@ -126,8 +126,6 @@ text-align: center;
     .agreements {
     background-color: lightgreen;
     padding: 10px;
-    margin-top: 20px;
-    margin: 0; /* Ensure no extra margin */
     width: 100;
     }
                
