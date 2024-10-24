@@ -124,11 +124,13 @@ text-align: center;
     }
 
     .agreements {
-            background-color: lightgreen;
-            padding: 20px;
-            text-align: center;
-            width: 100%;
-    }
+    background-color: lightgreen;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin: 0; /* Ensure no extra margin */
+    box-sizing: border-box; /* Include padding in the width calculation */
+                   }
 
 .documentation {
 margin-top: 5px;
