@@ -1,107 +1,87 @@
-/*
-Copyright 2015, 2019 Google Inc. All Rights Reserved.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
-*/
+const CACHE_NAME = 'temporary-cache';
+const OFFLINE_URL = './index.html';  // Your offline fallback page
+const TEMP_CACHE_DURATION = 60 * 60 * 24; // Cache resources for 1 day (in seconds)
 
-// Incrementing OFFLINE_VERSION will kick off the install event and force
-// previously cached resources to be updated from the network.
-const OFFLINE_VERSION = 27;
-const CACHE_NAME = 'offline';
-// Customize this with a different URL if needed.
-const OFFLINE_URL = './index.html';
+// List of URLs to cache for offline use
+const urlsToCache = [
+  OFFLINE_URL,
+  './style.css',  // Add necessary static assets
+  './icon-512x512.png',
+  './icon-384x384.png',
+  './icon-256x256.png',
+  './icon-192x192.png',
+];
 
 self.addEventListener('install', (event) => {
-  event.waitUntil((async () => {
-    const cache = await caches.open(CACHE_NAME);
-    // Setting {cache: 'reload'} in the new request will ensure that the response
-    // isn't fulfilled from the HTTP cache; i.e., it will be from the network.
-    await cache.add(new Request(OFFLINE_URL, {cache: 'reload'}));
-  })());
+  // Pre-cache essential offline resources
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(urlsToCache);
+    })
+  );
+  // Immediately activate the service worker without waiting
+  self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
-  event.waitUntil((async () => {
-    // Enable navigation preload if it's supported.
-    if ('navigationPreload' in self.registration) {
-      await self.registration.navigationPreload.enable();
-    }
-  })());
-
-  // Tell the active service worker to take control of the page immediately.
+  // Clean up old caches and activate the new service worker
+  event.waitUntil(
+    (async () => {
+      const keys = await caches.keys();
+      await Promise.all(
+        keys.map((key) => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key);
+          }
+        })
+      );
+    })()
+  );
   self.clients.claim();
 });
 
 self.addEventListener('fetch', (event) => {
-  if (event.request.mode === 'navigate') {
-    event.respondWith((async () => {
+  // Network first, fallback to cache for offline support
+  event.respondWith(
+    (async () => {
       try {
-        const preloadResponse = await event.preloadResponse;
-        if (preloadResponse) {
-          return preloadResponse;
-        }
-
-        const networkResponse = await fetch(event.request);
-        return networkResponse;
-      } catch (error) {
-        console.log('Fetch failed; returning offline page instead.', error);
-
+        const response = await fetch(event.request);
+        // If the request succeeds, temporarily cache the resource
         const cache = await caches.open(CACHE_NAME);
-        const cachedResponse = await cache.match(OFFLINE_URL);
-        return cachedResponse;
+        cache.put(event.request, response.clone());
+        return response;
+      } catch (error) {
+        // If network fails, check cache for offline resources
+        const cache = await caches.open(CACHE_NAME);
+        const cachedResponse = await cache.match(event.request);
+        return cachedResponse || fetch(OFFLINE_URL); // Return offline page if not found
       }
-    })());
-  }
-});
-
-// Background Sync setup for performing tasks like anonymizing in the background
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'background-sync') {
-    event.waitUntil(handleBackgroundSync());
-  }
-});
-
-async function handleBackgroundSync() {
-  try {
-    // Example: Make an anonymizing request in the background
-    const response = await fetch('/anonymize', {
-      method: 'POST',
-      body: JSON.stringify({ /* Add necessary data */ }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    const data = await response.json();
-    console.log('Background sync successful:', data);
-  } catch (error) {
-    console.error('Background sync failed:', error);
-  }
-}
-
-// Push Notifications for security alerts
-self.addEventListener('push', (event) => {
-  const data = event.data ? event.data.json() : {};
-  const options = {
-    body: data.body || 'Security alert from Pyodizer!',
-    icon: './icon-512x512.png',
-    badge: './icon-192x192.png'
-  };
-
-  event.waitUntil(
-    self.registration.showNotification(data.title || 'Pyodizer Notification', options)
+    })()
   );
 });
 
-// Optional: Periodic Background Sync (Experimental)
-self.addEventListener('periodicsync', (event) => {
-  if (event.tag === 'background-sync-periodic') {
-    event.waitUntil(handleBackgroundSync());
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'clear-temp-cache') {
+    event.waitUntil(clearTemporaryCache());
   }
 });
+
+// Function to clear the cache after a specified duration
+async function clearTemporaryCache() {
+  const cache = await caches.open(CACHE_NAME);
+  const requests = await cache.keys();
+  const now = Date.now();
+  
+  await Promise.all(
+    requests.map(async (request) => {
+      const response = await cache.match(request);
+      const dateHeader = response.headers.get('Date');
+      const dateCached = new Date(dateHeader).getTime();
+
+      if (now - dateCached > TEMP_CACHE_DURATION * 1000) {
+        // Delete the cached resource if it's older than the set duration
+        await cache.delete(request);
+      }
+    })
+  );
+    }
