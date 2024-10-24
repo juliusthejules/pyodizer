@@ -5,11 +5,17 @@ const TEMP_CACHE_DURATION = 60 * 60 * 24; // Cache resources for 1 day (in secon
 // List of URLs to cache for offline use
 const urlsToCache = [
   OFFLINE_URL,
-  './style.css',  // Add necessary static assets
+  './index.html',
+  './style.css',
+  './app.webmanifest',
   './icon-512x512.png',
   './icon-384x384.png',
   './icon-256x256.png',
   './icon-192x192.png',
+  './Pyodizer/pyodizer.py',
+  './Pyodizer/config.json',
+  './attribution/attribution.js',
+  './attribution/attribution.xml',
 ];
 
 self.addEventListener('install', (event) => {
