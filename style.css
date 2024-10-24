@@ -124,17 +124,17 @@ text-align: center;
     }
 
 .documentation {
-margin: auto 0;
+margin-top: 20px;
 background-color: lightyellow;
 color: #000;
 border: 1px solid #000; 
 border-radius: 5px;
 text-align: center;
-padding: 5px;
+padding: 3px;
 }
 
 #attribution {
-    margin: auto 0;
+    margin-top: 20px;
     background-color: #f1f1f1;
     border: 1px solid #000;
     border-radius: 5px;
