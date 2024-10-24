@@ -1,0 +1,43 @@
+{
+    "device": {
+        "macAddress": "RANDOMIZED"  // Choose "RANDOMIZED" to randomize MAC address or "00:00:00:00:00:00" to disable
+    },
+    "ipAddress": {
+        "ip4": "127.0.0.1",  // Choose "0.0.0.0" to block all external IPv4 access or "127.0.0.1" to set to localhost
+        "ip6": "::1"         // Choose "::" to block all external IPv6 access or "::1" to set to localhost
+    },
+    "firewallRules": [
+        {
+            "deny": true,
+            "port": 80,
+            "protocol": "TCP"
+        },
+        {
+            "deny": true,
+            "port": 443,
+            "protocol": "TCP"
+        },
+        {
+            "deny": true,
+            "port": 1194,
+            "protocol": "UDP"
+        },
+        {
+            "deny": true,
+            "port": 1,
+            "protocol": "ICMP"
+        }
+    ],
+    "telemetry": {
+        "enabled": false  // Telemetry is disabled by default
+    },
+    "hostname": "localhost",  // Set hostname to localhost
+    "dns": {
+        "primary": "127.0.0.1",  // Primary DNS set to localhost
+        "secondary": "::1"  // Secondary DNS set to localhost IPv6
+    },
+    "encryption": {
+        "method": "AES-256",  // Encryption method specified
+        "enable": true  // Encryption is enabled
+    }
+}
