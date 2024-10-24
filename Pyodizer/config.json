@@ -33,23 +33,24 @@
         {
             "deny": true,
             "port": 0,
-            "protocol": "ALL"  // Block all internal traffic
+            "protocol": "ALL"
         },
         {
             "deny": true,
             "port": 80,
-            "protocol": "TCP"  // Original duplicate
+            "protocol": "TCP"
         },
         {
             "deny": true,
             "port": 443,
-            "protocol": "TCP"  // Original duplicate
+            "protocol": "TCP"
         }
     ],
     "telemetry": {
         "enabled": false
     },
-    "hostname": "localhost",
+    "hostname": { "localhost"
+    },
     "dns": {
         "primary": "127.0.0.1",
         "secondary": "::1"
