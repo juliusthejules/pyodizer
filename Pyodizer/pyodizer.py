@@ -1,47 +1,34 @@
 import json
 
-# Load configuration from JSON file
-with open('./config.json', 'r') as f:
-    config = json.load(f)
+def read_config(filepath):
+    with open(filepath, 'r') as f:
+        return json.load(f)
+
+config = read_config('./config.json')
 
 class Device:
     def __init__(self, mac_address, bt_address):
         self.mac_address = mac_address
         self.bt_address = bt_address
 
-    def disable_mac(self):
-        if self.mac_address == "00:00:00:00:00:00":
-            print("Disabling MAC address...")
-
-    def disable_bt(self):
-        if self.bt_address == "00:00:00:00:00:00":
-            print("Disabling Bluetooth address...")
+    def disable_mac_and_bt(self):
+        print("Disabling MAC and Bluetooth addresses...")
 
 class IPAddress:
     def __init__(self, ip4, ip6):
         self.ip4 = ip4
         self.ip6 = ip6
 
-    def block_external_ip4(self):
-        print("Blocking external IPv4 access...")
+    def set_localhost(self):
+        print("Setting both IPv4 and IPv6 to localhost...")
 
-    def set_ip4_to_localhost(self):
-        print("Setting IPv4 to localhost...")
+class FirewallRule:
+    def __init__(self, rule):
+        self.rule = rule
 
-    def block_external_ip6(self):
-        print("Blocking external IPv6 access...")
-
-    def set_ip6_to_localhost(self):
-        print("Setting IPv6 to localhost...")
-
-class FirewallRules:
-    def __init__(self, rules):
-        self.rules = rules
-
-    def apply_rules(self):
-        for rule in self.rules:
-            action = "Deny" if rule['deny'] else "Allow"
-            print(f"{action}ing {rule['protocol']} traffic on port {rule['port']}")
+    def apply_rule(self):
+        if self.rule.get("deny") and self.rule.get("port") == 0 and self.rule.get("protocol") == "ALL":
+            print("Applying firewall rule: Blocking all traffic")
 
 class Telemetry:
     def __init__(self, enabled):
@@ -63,7 +50,7 @@ class DNS:
         self.secondary = secondary
 
     def set_dns(self):
-        print(f"Setting primary DNS to {self.primary} and secondary DNS to {self.secondary}...")
+        print("Setting DNS servers to primary and secondary localhost...")
 
 class Encryption:
     def __init__(self, method, enable):
@@ -71,35 +58,26 @@ class Encryption:
         self.enable = enable
 
     def enable_encryption(self):
-        if self.enable:
-            print(f"Enabling encryption using {self.method}...")
+        print(f"Enabling encryption with method {self.method}...")
 
 # Create instances based on configuration
-device = Device(config['device']['macAddress'], config['device']['btAddress'])
+device = Device(config['device']['macAddress'], config['device'].get('btAddress'))
 ip_address = IPAddress(config['ipAddress']['ip4'], config['ipAddress']['ip6'])
-firewall_rules = FirewallRules(config['firewallRules'])
+firewall_rule = FirewallRule(config['firewallRule'])
 telemetry = Telemetry(config['telemetry']['enabled'])
 hostname = Hostname(config['hostname'])
 dns = DNS(config['dns']['primary'], config['dns']['secondary'])
 encryption = Encryption(config['encryption']['method'], config['encryption']['enable'])
 
 # Apply configuration based on chosen values
-device.disable_mac()
-device.disable_bt()
-
-if ip_address.ip4 == "127.0.0.1":
-    ip_address.set_ip4_to_localhost()
-
-if ip_address.ip6 == "::1":
-    ip_address.set_ip6_to_localhost()
-
-firewall_rules.apply_rules()
+device.disable_mac_and_bt()
+ip_address.set_localhost()
+firewall_rule.apply_rule()
 
 if not telemetry.enabled:
     telemetry.disable_telemetry()
 
 hostname.set_hostname()
-
 dns.set_dns()
 
 if encryption.enable:
