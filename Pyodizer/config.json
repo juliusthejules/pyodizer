@@ -1,13 +1,10 @@
 {
     "device": {
-        "macAddress": "RANDOMIZED",
         "macAddress": "00:00:00:00:00:00"
     },
     "ipAddress": {
         "ip4": "127.0.0.1",
-        "ip4": "0.0.0.0",
-        "ip6": "::1",
-        "ip6": "::"
+        "ip6": "::1"
     },
     "firewallRules": [
         {
@@ -34,23 +31,12 @@
             "deny": true,
             "port": 0,
             "protocol": "ALL"
-        },
-        {
-            "deny": true,
-            "port": 80,
-            "protocol": "TCP"
-        },
-        {
-            "deny": true,
-            "port": 443,
-            "protocol": "TCP"
         }
     ],
     "telemetry": {
         "enabled": false
     },
-    "hostname": { "localhost"
-    },
+    "hostname": "localhost",
     "dns": {
         "primary": "127.0.0.1",
         "secondary": "::1"
