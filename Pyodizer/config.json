@@ -7,33 +7,11 @@
         "ip4": "127.0.0.1",
         "ip6": "::1"
     },
-    "firewallRules": [
-        {
-            "deny": true,
-            "port": 80,
-            "protocol": "TCP"
-        },
-        {
-            "deny": true,
-            "port": 443,
-            "protocol": "TCP"
-        },
-        {
-            "deny": true,
-            "port": 1194,
-            "protocol": "UDP"
-        },
-        {
-            "deny": true,
-            "port": 1,
-            "protocol": "ICMP"
-        },
-        {
-            "deny": true,
-            "port": 0,
-            "protocol": "ALL"
-        }
-    ],
+    "firewallRule": {
+        "deny": true,
+        "port": 0,
+        "protocol": "ALL"
+    },
     "telemetry": {
         "enabled": false
     },
