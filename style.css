@@ -82,16 +82,10 @@ body {
             margin: 0;
         }
 
-          footer, a {
-                      color: lightblue;
-                      text-decoration: none;
-                      text-align: center;
-          }
-
            a {
                       text-decoration: none;
                       text-align: center;
-           }
+         }
 
         /* Button styles */
 button {
