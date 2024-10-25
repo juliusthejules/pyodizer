@@ -130,7 +130,6 @@ text-align: center;
     }
 
 .documentation {
-margin-top: 5px;
 background-color: lightyellow;
 padding: 15px;
 color: #000;
@@ -140,7 +139,6 @@ text-align: center;
 }
 
 #attribution {
-    margin-top: 5px;
     background-color: #f1f1f1;
     padding: 15px;
     border: 1px solid #000;
