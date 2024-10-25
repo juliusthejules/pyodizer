@@ -5,11 +5,17 @@ with open('./config.json', 'r') as f:
     config = json.load(f)
 
 class Device:
-    def __init__(self, mac_address):
+    def __init__(self, mac_address, bt_address):
         self.mac_address = mac_address
+        self.bt_address = bt_address
 
     def disable_mac(self):
-        print("Disabling MAC address...")
+        if self.mac_address == "00:00:00:00:00:00":
+            print("Disabling MAC address...")
+
+    def disable_bt(self):
+        if self.bt_address == "00:00:00:00:00:00":
+            print("Disabling Bluetooth address...")
 
 class IPAddress:
     def __init__(self, ip4, ip6):
@@ -69,7 +75,7 @@ class Encryption:
             print(f"Enabling encryption using {self.method}...")
 
 # Create instances based on configuration
-device = Device(config['device']['macAddress'])
+device = Device(config['device']['macAddress'], config['device']['btAddress'])
 ip_address = IPAddress(config['ipAddress']['ip4'], config['ipAddress']['ip6'])
 firewall_rules = FirewallRules(config['firewallRules'])
 telemetry = Telemetry(config['telemetry']['enabled'])
@@ -78,8 +84,8 @@ dns = DNS(config['dns']['primary'], config['dns']['secondary'])
 encryption = Encryption(config['encryption']['method'], config['encryption']['enable'])
 
 # Apply configuration based on chosen values
-if device.mac_address == "00:00:00:00:00:00":
-    device.disable_mac()
+device.disable_mac()
+device.disable_bt()
 
 if ip_address.ip4 == "127.0.0.1":
     ip_address.set_ip4_to_localhost()
