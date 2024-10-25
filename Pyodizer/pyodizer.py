@@ -8,9 +8,6 @@ class Device:
     def __init__(self, mac_address):
         self.mac_address = mac_address
 
-    def randomize_mac(self):
-        print("Randomizing MAC address...")
-
     def disable_mac(self):
         print("Disabling MAC address...")
 
@@ -81,19 +78,13 @@ dns = DNS(config['dns']['primary'], config['dns']['secondary'])
 encryption = Encryption(config['encryption']['method'], config['encryption']['enable'])
 
 # Apply configuration based on chosen values
-if device.mac_address == "RANDOMIZED":
-    device.randomize_mac()
-elif device.mac_address == "00:00:00:00:00:00":
+if device.mac_address == "00:00:00:00:00:00":
     device.disable_mac()
 
-if ip_address.ip4 == "0.0.0.0":
-    ip_address.block_external_ip4()
-elif ip_address.ip4 == "127.0.0.1":
+if ip_address.ip4 == "127.0.0.1":
     ip_address.set_ip4_to_localhost()
 
-if ip_address.ip6 == "::":
-    ip_address.block_external_ip6()
-elif ip_address.ip6 == "::1":
+if ip_address.ip6 == "::1":
     ip_address.set_ip6_to_localhost()
 
 firewall_rules.apply_rules()
