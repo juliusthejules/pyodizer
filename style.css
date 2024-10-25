@@ -84,7 +84,7 @@ body {
 
         /* Button styles */
 button {
-    background-color: #007bff;
+    background-color: purple;
     border: none;
     color: white;
     border-radius: 5px;
@@ -118,10 +118,6 @@ text-align: center;
         transition: background-color 0.3s ease;
         text-align: center;
         width: 100%;
-   }
-
-    .share-btn:hover {
-        background-color: #2980b9;
     }
 
     .agreements {
