@@ -18,10 +18,11 @@ async function loadAttribution() {
         
         // Create the HTML content to display
         const attributionHtml = `
+            <h2>Attribution</h2>
             <p>
                 <a href="${projectUrl}" target="_blank">${title}</a> 
-                created by <a href="${creatorUrl}" target="_blank">${creatorName}</a>.
-                <br> Licensed under <a href="${licenseUrl}" target="_blank">${licenseType}</a>.
+                created by <a href="${creatorUrl}" target="_blank" rel="me noopener noreferrer">${creatorName}</a>.
+                <br> Licensed under <a href="${licenseUrl}" target="_blank" rel="license noopener noreferrer">${licenseType}</a>.
             </p>
         `;
 
