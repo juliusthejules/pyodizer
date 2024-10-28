@@ -1,6 +1,6 @@
 # Pyodizer
 
-**Pyodizer** is a Python configuration tool designed to help anonymize devices, block both internal & external IP traffic, disable telemetry, configure firewall rules, and enhance encryption. This project offers a secure and private way to control your network and device settings, ensuring your data and activities remain safe from external surveillance.
+**Pyodizer** is a Python configuration tool & PWA designed to help anonymize devices, block both internal & external IP traffic, disable telemetry, configure firewall rules, and enhance encryption. This project offers a secure and private way to control your network and device settings, ensuring your data and activities remain safe from external surveillance.
 
 ## Features
 
