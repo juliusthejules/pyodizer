@@ -83,12 +83,8 @@ body {
         }
 
            a {
+    color: #1e90ff; /* Dodger blue */
     text-decoration: none;
-    text-align: center;
-}
-
-a:hover {
-    background-color: #ffd966; /* pale gold */
 }
 
         /* Button styles */
