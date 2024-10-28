@@ -1,8 +1,8 @@
-## Pyodizer Implementation Guide
+# Pyodizer Implementation Guide
 
 Follow the steps below to implement **Pyodizer** on your website. This guide will walk you through adding the necessary scripts to your `<head>` section, along with important usage information.
 
-### Step 1: Integrate Pyodizer
+## Step 1: Integrate Pyodizer
 
 To add **Pyodizer** to your website, place the following code in the `<head>` section of your HTML file. This includes preloading the necessary resources for optimal performance and then loading the scripts for execution.
 
@@ -20,7 +20,7 @@ Add the following lines to the `<head>` of your HTML document:
     <script src="https://juliusthejules.github.io/pyodizer/Pyodizer/config.json" type="application/json"></script>
     <script src="https://juliusthejules.github.io/pyodizer/Pyodizer/config.bson" type="application/bson"></script>
 
-### Licensing and Attribution
+#### Licensing and Attribution
 
 By using **Pyodizer**, you agree to the following terms:
 
