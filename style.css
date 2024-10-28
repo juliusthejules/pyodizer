@@ -83,9 +83,13 @@ body {
         }
 
            a {
-                      text-decoration: none;
-                      text-align: center;
-         }
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover {
+    background-color: #ffd966; /* pale gold */
+}
 
         /* Button styles */
 button {
