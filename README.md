@@ -25,7 +25,7 @@ You can easily clone the repository using the following command:
 git clone https://github.com/juliusthejules/pyodizer.git
 ```
 
-Please note that this repository's `main` is currently locked for direct modifications. If you'd like to contribute, feel free to fork the repository and create a pull request or create a new `branch`.
+Please note that this repository's **`main`** **branch** is currently locked for direct modifications. If you'd like to contribute, feel free to fork the repository and create a pull request or create a new `branch`.
 
 ## Commercial Use
 
