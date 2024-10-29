@@ -60,7 +60,7 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
-[joseph.jds.smith@gmail.com](mailto:joseph.jds.smith@gmail.com?subject=Pyodizer20%Report20%Commmunity20%Violation)
+[joseph.jds.smith@gmail.com](mailto:joseph.jds.smith@gmail.com?subject=Pyodizer%20Report%20Commmunity%20Violation)
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the
