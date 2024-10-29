@@ -37,7 +37,7 @@ This project is licensed under the [Creative Commons Attribution-NonCommercial-S
 
 ## Disclaimer
 
-This software, Pyodizer, is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. It is provided “as-is” without warranties of any kind, including but not limited to fitness for a particular purpose or non-infringement. The creator and associates disclaim all liability for any damages, claims, or losses arising from the use or reliance on this software.
+This software, Pyodizer™, is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. It is provided “as-is” without warranties of any kind, including but not limited to fitness for a particular purpose or non-infringement. The creator and associates disclaim all liability for any damages, claims, or losses arising from the use or reliance on this software.
 
 ## Contact
 
