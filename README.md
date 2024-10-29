@@ -6,13 +6,14 @@
 
 - **Device Anonymization**: Disables MAC addresses for increased privacy.
 - **IP Configuration**: Restricts both IPv4 and IPv6 traffic to localhost, effectively blocking both internal & external access.
-- **Firewall Rules**: Blocks all ports and closes all pings to secure device communications.
+- **Firewall Rules**: Blocks all ports and closes all pings to secure device communications. Blocks tracerouting to stop all tracking.
 - **Telemetry**: Disabled by default to prevent data collection.
 - **Hostname & DNS**: Set to localhost to prevent external hostname resolution.
 -  **Cookies**: Clears existing cookies and blocks new cookies to prevent even more forms of tracking.
 -  **Cache**: All cache is temporary and loads only necessary components of the Pyodizer PWA, ensuring as much privacy as possible.
 -  **Hyperlinks**: All hyperlink rel's are loaded as `noopener noreferrer` for optimal privacy.
 - **Encryption**: Uses AES-256 encryption to secure configurations.
+- **Fingerprinting**: Obsfucates fingerprints to hide your browser details.
 - **License**: Licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 ## Getting Started
