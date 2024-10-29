@@ -23,5 +23,11 @@
     "encryption": {
         "method": "AES-256",
         "enable": true
+    },
+    "traceroute": {
+        "block": true
+    },
+    "fingerprinting": {
+        "obfuscate": true
     }
 }
