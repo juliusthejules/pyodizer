@@ -12,13 +12,9 @@ Add the following lines to the `<head>` of your HTML document:
 
     <!-- Load Pyodizer Scripts -->
     <link rel="preload" as="script" href="https://juliusthejules.github.io/pyodizer/Pyodizer/pyodizer.py" type="text/x-python" crossorigin="anonymous">
-    <link rel="preload" as="fetch" href="https://juliusthejules.github.io/pyodizer/Pyodizer/config.json" type="application/json" crossorigin="anonymous">
-    <link rel="preload" as="fetch" href="https://juliusthejules.github.io/pyodizer/Pyodizer/config.bson" type="application/bson" crossorigin="anonymous">
     <link rel="preload" as="script" href="https://juliusthejules.github.io/pyodizer/Pyodizer/pyodizer.js" type="text/javascript" crossorigin="anonymous">
     <script src="https://juliusthejules.github.io/pyodizer/Pyodizer/pyodizer.js" type="text/javascript"></script>
     <script src="https://juliusthejules.github.io/pyodizer/Pyodizer/pyodizer.py" type="text/x-python"></script>
-    <script src="https://juliusthejules.github.io/pyodizer/Pyodizer/config.json" type="application/json"></script>
-    <script src="https://juliusthejules.github.io/pyodizer/Pyodizer/config.bson" type="application/bson"></script>
 
 #### Licensing and Attribution
 
