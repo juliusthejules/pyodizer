@@ -10,13 +10,19 @@ To add **Pyodizer** to your website, place the following code in the `<head>` se
 
 Add the following lines to the `<head>` of your HTML document:
 
-    <!-- Preload Pyodizer Scripts -->
+`<!-- Preload Pyodizer Scripts -->
+<link rel="preload" as="script" href="https://juliusthejules.github.io/pyodizer/Pyodizer/pyodizer.py" type="text/x-python" crossorigin="anonymous">
+<link rel="preload" as="script" href="https://juliusthejules.github.io/pyodizer/Pyodizer/pyodizer.js" type="text/javascript" crossorigin="anonymous">
+
+```
+<!-- Preload Pyodizer Scripts -->
 <link rel="preload" as="script" href="https://juliusthejules.github.io/pyodizer/Pyodizer/pyodizer.py" type="text/x-python" crossorigin="anonymous">
 <link rel="preload" as="script" href="https://juliusthejules.github.io/pyodizer/Pyodizer/pyodizer.js" type="text/javascript" crossorigin="anonymous">
 
 <!-- Load Pyodizer Scripts Asynchronously with Cross-Origin Policy -->
 <script src="https://juliusthejules.github.io/pyodizer/Pyodizer/pyodizer.js" type="text/javascript" async crossorigin="anonymous"></script>
 <script src="https://juliusthejules.github.io/pyodizer/Pyodizer/pyodizer.py" type="text/x-python" async crossorigin="anonymous"></script>
+```
 
 #### Licensing and Attribution
 
