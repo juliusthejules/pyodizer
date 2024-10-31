@@ -10,10 +10,6 @@ To add **Pyodizer** to your website, place the following code in the `<head>` se
 
 Add the following lines to the `<head>` of your HTML document:
 
-`<!-- Preload Pyodizer Scripts -->
-<link rel="preload" as="script" href="https://juliusthejules.github.io/pyodizer/Pyodizer/pyodizer.py" type="text/x-python" crossorigin="anonymous">
-<link rel="preload" as="script" href="https://juliusthejules.github.io/pyodizer/Pyodizer/pyodizer.js" type="text/javascript" crossorigin="anonymous">
-
 ```
 <!-- Preload Pyodizer Scripts -->
 <link rel="preload" as="script" href="https://juliusthejules.github.io/pyodizer/Pyodizer/pyodizer.py" type="text/x-python" crossorigin="anonymous">
