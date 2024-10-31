@@ -39,7 +39,9 @@ self.addEventListener('install', event => {
   './icon-256x256.png',
   './icon-192x192.png',
   './Pyodizer/pyodizer.py',
-  './Pyodizer/pyodizer.js'
+  './Pyodizer/pyodizer.js',
+  './robots.txt',
+  './sitemap.xml'
             ]);
         })
     );
