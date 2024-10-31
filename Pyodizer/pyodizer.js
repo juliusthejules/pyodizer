@@ -30,9 +30,10 @@ self.addEventListener('install', event => {
         caches.open('pyodizer-cache').then(cache => {
             return cache.addAll([
                 // Specify essential files here
-                './index.html',
+  './index.html',
   './style.css',
   './app.webmanifest',
+  './social.png',
   './icon-512x512.png',
   './icon-384x384.png',
   './icon-256x256.png',
