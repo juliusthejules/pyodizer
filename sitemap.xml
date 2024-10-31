@@ -4,4 +4,8 @@
     <loc>https://juliusthejules.github.io/pyodizer/</loc>
     <priority>1.0</priority>
   </url>
+  <url> 
+    <loc>https://juliusthejules.github.io/pyodizer/social.png</loc>
+    <priority>0.80</priority>
+  </url>
 </urlset>
