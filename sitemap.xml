@@ -2,10 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://juliusthejules.github.io/pyodizer/</loc>
-    <priority>1.0</priority>
   </url>
-  <url> 
+  <url>
+    <loc>https://juliusthejules.github.io/pyodizer/index.html</loc>
+  </url>
+  <url>
+<loc>https://juliusthejules.github.io/pyodizer/BingSiteAuth.xml</loc>
+  </url>
+  <url>
+<loc>https://juliusthejules.github.io/pyodizer/CODE_OF_CONDUCT.md</loc>
+  </url>
+  <url>
+<loc>https://juliusthejules.github.io/pyodizer/CONTRIBUTING.md</loc>
+  </url>
+  <url>
+<loc>https://juliusthejules.github.io/pyodizer/LICENSE</loc>
+  </url>
+  <url>
+<loc>https://juliusthejules.github.io/pyodizer/README.md</loc>
+  </url>
+  <url>
+<loc>https://juliusthejules.github.io/pyodizer/SECURITY.md</loc>
+  </url>
+  <url>
+<loc>https://juliusthejules.github.io/pyodizer/app.webmanifest</loc>
+  </url>
+  <url>
+<loc>https://juliusthejules.github.io/pyodizer/google57f6db56e010677c.html</loc>
+  </url>
+  <url>
+    <loc>https://juliusthejules.github.io/pyodizer/icon-192x192.png</loc>
+  </url>
+  <url>
+    <loc>https://juliusthejules.github.io/pyodizer/icon-256x256.png</loc>
+  </url>
+  <url>
+    <loc>https://juliusthejules.github.io/pyodizer/icon-384x384.png</loc>
+  </url>
+  <url>
+    <loc>https://juliusthejules.github.io/pyodizer/icon-512x512.png</loc>
+  </url>
+  <url>
+    <loc>https://juliusthejules.github.io/pyodizer/</loc>
+  </url>
+  <url>
+    <loc>https://juliusthejules.github.io/pyodizer/requirements.txt</loc>
+  </url>
+  <url>
+    <loc>https://juliusthejules.github.io/pyodizer/robots.txt</loc>
+  </url>
+  <url>
     <loc>https://juliusthejules.github.io/pyodizer/social.png</loc>
-    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://juliusthejules.github.io/pyodizer/style.css</loc>
+  </url>
+  <url>
+    <loc>https://juliusthejules.github.io/pyodizer/sw.js</loc>
   </url>
 </urlset>
