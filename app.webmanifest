@@ -1,7 +1,7 @@
 {
-  "theme_color": "#8936FF",
-  "background_color": "#0000ff",
-  "icons": [
+  "background_color": "#004D40",
+  "theme_color": "#00796B",
+    "icons": [
     {
       "sizes": "192x192",
       "src": "./icon-192x192.png",
@@ -31,5 +31,5 @@
   "short_name": "Pyodizer",
   "start_url": "./index.html",
   "scope": "./",
-  "description": "A Python-based privacy and security configuration manager."
+  "description": "Unmatched online privacy and security with Pyodizer."
 }
