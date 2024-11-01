@@ -1,3 +1,5 @@
+![Social Image](https://juliusthejules.github.io/pyodizer/social.png)
+
 # Security Policy for Pyodizer
 
 We appreciate your efforts to help make Pyodizer secure! Below are our guidelines for responsibly reporting and handling security issues.
