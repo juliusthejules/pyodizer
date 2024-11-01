@@ -1,3 +1,5 @@
+![Social Image](https://juliusthejules.github.io/pyodizer/social.png)
+
 # Pyodizer Implementation Guide
 
 Follow the steps below to implement **Pyodizer** on your website. This guide will walk you through adding the necessary scripts to your `<head>` section, along with important usage information.
