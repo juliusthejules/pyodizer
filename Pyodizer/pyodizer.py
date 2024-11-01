@@ -32,7 +32,7 @@ class Telemetry:
         print("Disabling telemetry...")
 
 class Hostname:
-    def __init__(self, hostname="localhost"):
+    def __init__(self, hostname="127.0.0.1"):
         self.hostname = hostname
 
     def set_hostname(self):
