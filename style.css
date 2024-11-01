@@ -138,3 +138,27 @@ border: 1px solid #000;
 border-radius: 5px;
 text-align: center;
 }
+
+/* Styling for .app section */
+.app {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.app p {
+    padding: 10px 20px;
+    border: 2px solid #004D40; /* Adjust color as needed */
+    border-radius: 8px;
+    color: #004D40; /* Text color */
+    background-color: #E0F2F1; /* Background color */
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.app a {
+    color: #00796B;
+    text-decoration: none;
+    font-weight: bold;
+}
