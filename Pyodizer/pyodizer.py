@@ -39,7 +39,7 @@ class Hostname:
         print(f"Setting hostname to {self.hostname}...")
 
 class DNS:
-    def __init__(self, primary="127.0.0.1", secondary="::1"):
+    def __init__(self, primary="::1", secondary="::1"):
         self.primary = primary
         self.secondary = secondary
 
