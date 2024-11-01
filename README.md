@@ -1,3 +1,5 @@
+![Social Image](https://juliusthejules.github.io/pyodizer/social.png)
+
 # Pyodizer
 
 **Pyodizer** is a Progressive Web App (PWA) & Python configuration tool designed to help anonymize devices, block both internal & external IP traffic, disable telemetry, configure firewall rules, and enhance encryption. This project offers a secure and private way to control your network and device settings, ensuring your data and activities remain safe from external surveillance.
