@@ -1,3 +1,5 @@
+![Social Image](https://juliusthejules.github.io/pyodizer/social.png)
+
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge
