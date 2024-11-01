@@ -144,7 +144,6 @@ text-align: center;
     display: flex;
     justify-content: center;
     padding: 20px;
-    width: 100%;
 }
 
 .app p {
@@ -156,6 +155,7 @@ text-align: center;
     font-size: 1.1rem;
     font-weight: bold;
     text-align: center;
+    width: 97%;
 }
 
 .app a {
