@@ -1,3 +1,5 @@
+![Social Image](https://juliusthejules.github.io/pyodizer/social.png)
+
 # Contributing to Pyodizer
 
 We’re excited to have you as a contributor to Pyodizer! We value your ideas, code contributions, and feedback. Please follow the guidelines below to ensure a smooth contribution process.
