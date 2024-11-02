@@ -31,3 +31,10 @@ By using **Pyodizer**, you agree to the following terms:
 - **Commercial Use**: Commercial use of Pyodizer is **strictly prohibited** without an active subscription. A valid subscription provides automatic permission for commercial purposes. 
 
 To learn more about subscription options, please visit the `Commercial Use` section of the [index.html](https://juliusthejules.github.io/pyodizer/index.html) page.
+
+##### Contact
+
+If you have any questions or concerns regarding the implementation of Pyodizer, please feel free to reach out. I'm here to assist with any aspect of the process to ensure a smooth setup.
+
+For support, contact me at:  
+[joseph.jds.smith@gmail.com](mailto:joseph.jds.smith@gmail.com?subject=Pyodizer%20Implementation%20Guide)
