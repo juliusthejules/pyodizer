@@ -92,3 +92,5 @@ async function clearTemporaryCache() {
     })
   );
     }
+
+// Pyodizer™. Copyright © 2024. Joseph D. Smith.
