@@ -1,3 +1,5 @@
 scapy
 cryptography
 requests
+
+# Pyodizer™. Copyright © 2024. Joseph D. Smith.
