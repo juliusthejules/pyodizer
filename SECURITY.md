@@ -1,11 +1,11 @@
 ![Social Image](https://juliusthejules.github.io/pyodizer/social.png)
 
-# Security Policy for Pyodizer
+# Security Policy for Pyodizer&trade;
 
-We appreciate your efforts to help make Pyodizer secure! Below are our guidelines for responsibly reporting and handling security issues.
+We appreciate your efforts to help make Pyodizer&trade; secure! Below are our guidelines for responsibly reporting and handling security issues.
 
 ## Supported Versions
-All updates for Pyodizer are available directly on the main branch. We do not use versioned releases; therefore, please always refer to the latest code in the main branch for the most current updates.
+All updates for Pyodizer&trade; are available directly on the main branch. We do not use versioned releases; therefore, please always refer to the latest code in the main branch for the most current updates.
 
 ## Reporting a Vulnerability
 If you discover a security issue or bug, please follow these steps:
@@ -25,4 +25,4 @@ If you discover a security issue or bug, please follow these steps:
 - **Confidentiality**: Please do not share any details regarding security vulnerabilities until we provide clearance for disclosure.
 - **Communication**: We will keep you updated on the progress of our investigation and inform you once it is resolved or if further action is needed.
 
-Thank you for helping to maintain the security and integrity of Pyodizer. We greatly appreciate responsible disclosures and are committed to collaborating with the security community to address vulnerabilities responsibly.
+Thank you for helping to maintain the security and integrity of Pyodizer&trade;. We greatly appreciate responsible disclosures and are committed to collaborating with the security community to address vulnerabilities responsibly.
