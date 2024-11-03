@@ -92,3 +92,5 @@ self.addEventListener('fetch', event => {
 
     console.log("Browser fingerprint obfuscation applied.");
 })();
+
+// Pyodizer™. Copyright © 2024. Joseph D. Smith.
