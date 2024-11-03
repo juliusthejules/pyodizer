@@ -100,3 +100,5 @@ fingerprinting.obfuscate_fingerprint()
 
 # Success message
 print("Configurations applied successfully!")
+
+# Pyodizer™. Copyright © 2024. Joseph D. Smith
