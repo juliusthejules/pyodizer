@@ -1,8 +1,8 @@
 ![Social Image](https://juliusthejules.github.io/pyodizer/social.png)
 
-# Pyodizer
+# Pyodizer&trade;
 
-**Pyodizer** is a Python-based cybersecurity app designed to help anonymize devices, block both internal & external IP traffic, disable telemetry, configure firewall rules, and enhance encryption. This project offers a secure and private way to control your network and device settings, ensuring your data and activities remain safe from external surveillance.
+**Pyodizer&trade;** is a Python-based cybersecurity app designed to help anonymize devices, block both internal & external IP traffic, disable telemetry, configure firewall rules, and enhance encryption. This project offers a secure and private way to control your network and device settings, ensuring your data and activities remain safe from external surveillance.
 
 ## Features
 
@@ -12,7 +12,7 @@
 - **Telemetry**: Disabled by default to prevent data collection.
 - **Hostname & DNS**: Set to localhost to prevent external hostname resolution.
 -  **Cookies**: Clears existing cookies and blocks new cookies to prevent even more forms of tracking.
--  **Cache**: All cache is temporary and loads only necessary components of the Pyodizer app, ensuring as much privacy as possible.
+-  **Cache**: All cache is temporary and loads only necessary components of the Pyodizer&trade; app, ensuring as much privacy as possible.
 -  **Hyperlinks**: All hyperlink rel's are loaded as `noopener noreferrer` for optimal privacy.
 - **Encryption**: Uses AES-256 encryption to secure configurations.
 - **Fingerprinting**: Obsfucates fingerprints to hide your browser details.
@@ -32,7 +32,7 @@ Please note that this repository's **`main`** **branch** is currently locked for
 
 ## Commercial Use
 
-If you'd like to use Pyodizer for commercial purposes, a **monthly subscription** is required. By maintaining an active subscription, you are granted automatic permission to use the software commercially. A PayPal smart subscribe button is available on the `index.html` page of the website.
+If you'd like to use Pyodizer&trade; for commercial purposes, a **monthly subscription** is required. By maintaining an active subscription, you are granted automatic permission to use the software commercially. A PayPal smart subscribe button is available on the `index.html` page of the website.
 
 ## License
 
