@@ -1,8 +1,8 @@
 ![Social Image](https://juliusthejules.github.io/pyodizer/social.png)
 
-# Contributing to Pyodizer
+# Contributing to Pyodizer&trade;
 
-We’re excited to have you as a contributor to Pyodizer! We value your ideas, code contributions, and feedback. Please follow the guidelines below to ensure a smooth contribution process.
+We’re excited to have you as a contributor to Pyodizer&trade;! We value your ideas, code contributions, and feedback. Please follow the guidelines below to ensure a smooth contribution process.
 
 ## 1. Fork the Repository
 Since the main branch is locked, please start by forking the repository. This creates a copy where you can make changes without affecting the main project.
@@ -27,4 +27,4 @@ Feel free to explore open issues, leave comments, and create new issues for bugs
 ## 6. Code of Conduct
 By participating in this project, you agree to maintain a respectful and collaborative environment. Any violation of this code may result in your contributions being rejected.
 
-Thank you for helping make Pyodizer better!
+Thank you for helping make Pyodizer&trade; better!
