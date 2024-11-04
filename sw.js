@@ -8,6 +8,8 @@ const urlsToCache = [
   './index.html',
   './style.css',
   './app.webmanifest',
+  './bot.js',
+  './trackerBlocker-sw.js',
   './social.png',
   './icon-512x512.png',
   './icon-384x384.png',
