@@ -2,6 +2,7 @@ body {
             font-family: Arial, sans-serif;
             padding: 0;
             margin: 0;
+            margin-top: 0;
         }
 
         header {
@@ -9,7 +10,6 @@ body {
             color: #ecf0f1;
             padding: 20px;
             text-align: center;
-            margin-top: 5px;
         }
 
         section {    
@@ -81,7 +81,6 @@ body {
             color: #ecf0f1;
             text-align: center;
             padding: 10px;
-            margin-top: 5px;
         }
 
            a {
@@ -130,7 +129,6 @@ text-align: center;
     .agreements {
     background-color: lightblue;
     padding: 10px;
-    margin-top: 5px;
     }
 
 .documentation {
