@@ -16,7 +16,7 @@
 -  **Hyperlinks**: All hyperlink rel's are loaded as `noopener noreferrer` for optimal privacy.
 - **Encryption**: Uses AES-256 encryption to secure configurations.
 - **Fingerprinting**: Obsfucates fingerprints to hide your browser details.
-- **Automated Bot**: Comes with a bot to automate the tasks of Pyodizer's anti-tracking features.
+- **Automated Bot**: Comes with a bot that automates the tasks of Pyodizer's anti-tracking features.
 - **License**: Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International [License](https://juliusthejules.github.io/pyodizer/LICENSE).
 
 ## Getting Started
