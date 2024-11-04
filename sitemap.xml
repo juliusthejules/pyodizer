@@ -10,6 +10,9 @@
 <loc>https://juliusthejules.github.io/pyodizer/BingSiteAuth.xml</loc>
   </url>
   <url>
+    <loc>https://juliusthejules.github.io/pyodizer/bot.js</loc>
+  </url>
+  <url>
 <loc>https://juliusthejules.github.io/pyodizer/CODE_OF_CONDUCT.md</loc>
   </url>
   <url>
@@ -51,6 +54,15 @@
   <url>
     <loc>https://juliusthejules.github.io/pyodizer/social.png</loc>
   </url>
+  <url>
+<loc>https://juliusthejules.github.io/pyodizer/style.css</loc>
+ </url>
+  <url>
+<loc>https://juliusthejules.github.io/pyodizer/sw.js</loc>
+ </url>
+  <url>
+<loc>https://juliusthejules.github.io/pyodizer/trackerBlocker-sw.js</loc>
+ </url>
   <url>
     <loc>https://juliusthejules.github.io/pyodizer/style.css</loc>
   </url>
