@@ -93,6 +93,7 @@
     </ul>
 </section>
 
+   <!-- Instructions for installing the PWA -->
 <section>
    <h2>How to Install the Pyodizer&trade; PWA</h2>
    <ol>
@@ -102,6 +103,7 @@
  <li>Tap Install. This will install Pyodizer&trade; as a PWA on your device.</li>
    </ol>
 
+   <!-- Instructions for setting up permissions for the PWA -->
    <h2>Setting Up Permissions for Background Functionality</h2>
    <ol>
       <li>After installation, open the Pyodizer&trade; app from your home screen.</li>
@@ -130,27 +132,26 @@
             <p>By subscribing, you are granted permission to use Pyodizer&trade; for commercial purposes as long as your subscription remains active. The subscription covers one user or organization per account. All commercial subscribers must attribute Pyodizer&trade; in any product or service that uses it.</p>
 
             <!-- PayPal Smart Subscribe Button -->
-           <div id="paypal-button-container-P-6A3739048T916764SM4A2QMA"></div>
-           
+           <div id="paypal-button-container-P-63T436796M6305825M4UWOYA"></div>
 <script src="https://www.paypal.com/sdk/js?client-id=AcP-YPqYFUIzxu_yxeu1ohYtJ68MdR1XsNiAZmGNVNVBG7Mb5RXlzMx_RfXXTRWE99flaP3gZeGmmfjz&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
 <script>
   paypal.Buttons({
       style: {
           shape: 'rect',
-          color: 'gold',
+          color: 'silver',
           layout: 'vertical',
           label: 'subscribe'
       },
       createSubscription: function(data, actions) {
         return actions.subscription.create({
           /* Creates the subscription */
-          plan_id: 'P-6A3739048T916764SM4A2QMA'
+          plan_id: 'P-63T436796M6305825M4UWOYA'
         });
       },
       onApprove: function(data, actions) {
         alert(data.subscriptionID); // You can add optional success message for the subscriber here
       }
-  }).render('#paypal-button-container-P-6A3739048T916764SM4A2QMA'); // Renders the PayPal button
+  }).render('#paypal-button-container-P-63T436796M6305825M4UWOYA'); // Renders the PayPal button
 </script>
 </section>
 
