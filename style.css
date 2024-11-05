@@ -16,6 +16,7 @@ body {
            background-color: #f0f0f0;
            padding: 20px;
            margin-top: 5px;
+           margin: 0;
         }
 
         h1 {
@@ -130,6 +131,7 @@ text-align: center;
     .agreements {
     background-color: lightblue;
     padding: 10px;
+    margin: 0;
     }
 
 .documentation {
