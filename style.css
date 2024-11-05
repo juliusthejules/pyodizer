@@ -39,7 +39,7 @@ body {
 
 hr {
     border: 2px solid #00796B;
-    background-color: #00796B; /* Match Pyodizer’s theme color */
+    background-color: lightblue; /* Match Pyodizer’s theme color */
     opacity: 0.8; /* Slightly transparent for a smooth effect */
     width: 100%; /* Adjust length to be shorter than the full width */
     margin: 0;
@@ -124,7 +124,7 @@ button {
         }
 
 .agreements {
-    background-color: lightblue;
+    background-color: #004D40;
     padding: 10px;
     margin: 0;
     }
