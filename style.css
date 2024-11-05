@@ -43,8 +43,6 @@ hr {
     border: 2px solid #00796B;
     background-color: lightblue; /* Match Pyodizer’s theme color */
     opacity: 0.8; /* Slightly transparent for a smooth effect */
-    width: 100%; /* Adjust length to be shorter than the full width */
-    margin: 0;
     border-radius: 2px; /* Smooth out edges */
 }
 
@@ -60,7 +58,6 @@ button {
     color: white;
     border-radius: 5px;
     padding: 15px;
-    margin: 0;
     text-align: center;
     width: 100%;
 }
@@ -70,7 +67,6 @@ button {
         color: white;
         border: none;
         padding: 10px 20px;
-        margin: 0;
         font-size: 16px;
         cursor: pointer;
         border-radius: 5px;
@@ -82,7 +78,6 @@ button {
         .code-block {
             background-color: #ecf0f1;
             padding: 10px;
-            margin: 0;
             border-left: 4px solid #3498db;
             font-family: monospace;
             white-space: pre-wrap;
@@ -136,7 +131,6 @@ button {
 .documentation {
 background-color: #f1f1f1;
 padding: 15px;
-margin: 0;
 border: 1px solid #000; 
 border-radius: 5px;
 text-align: center;
