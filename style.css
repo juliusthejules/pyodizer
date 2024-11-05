@@ -38,6 +38,7 @@ body {
         }
 
 hr {
+    border: 2px solid #00796B;
     background-color: #00796B; /* Match Pyodizer’s theme color */
     opacity: 0.8; /* Slightly transparent for a smooth effect */
     width: 100%; /* Adjust length to be shorter than the full width */
