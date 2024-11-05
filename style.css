@@ -10,13 +10,14 @@ body {
             color: #ecf0f1;
             padding: 20px;
             text-align: center;
-            margin-top: 5px;
+            margin: 0;
         }
 
         section {    
            background-color: #f0f0f0;
            padding: 20px;
            margin: 0;
+           margin-top: 5px;
         }
 
          footer {
@@ -24,7 +25,7 @@ body {
             color: #ecf0f1;
             text-align: center;
             padding: 10px;
-            margin-top: 5px;
+            margin: 0;
 }
 
         h1 {
@@ -58,6 +59,7 @@ button {
     color: white;
     border-radius: 5px;
     padding: 15px;
+    margin: 0;
     text-align: center;
     width: 100%;
 }
@@ -67,6 +69,7 @@ button {
         color: white;
         border: none;
         padding: 10px 20px;
+        margin: 0;
         font-size: 16px;
         cursor: pointer;
         border-radius: 5px;
@@ -78,6 +81,7 @@ button {
         .code-block {
             background-color: #ecf0f1;
             padding: 10px;
+            margin: 0;
             border-left: 4px solid #3498db;
             font-family: monospace;
             white-space: pre-wrap;
@@ -131,6 +135,7 @@ button {
 .documentation {
 background-color: #f1f1f1;
 padding: 15px;
+margin: 0;
 border: 1px solid #000; 
 border-radius: 5px;
 text-align: center;
