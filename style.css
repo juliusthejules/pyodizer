@@ -43,6 +43,8 @@ hr {
     opacity: 0.8; /* Slightly transparent for a smooth effect */
     width: 100%; /* Adjust length to be shorter than the full width */
     margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     border-radius: 2px; /* Smooth out edges */
 }
 
@@ -125,8 +127,11 @@ button {
 
 .agreements {
     background-color: #004D40;
+    color: lightblue;
     padding: 10px;
     margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     }
 
 .documentation {
