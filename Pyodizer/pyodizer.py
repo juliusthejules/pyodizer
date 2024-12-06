@@ -32,19 +32,19 @@ class Telemetry:
         print("Disabling telemetry...")
 
 class Hostname:
-    def __init__(self, hostname="::1"):
+    def __init__(self, hostname="127.0.0.1"):
         self.hostname = hostname
 
     def set_hostname(self):
-        print(f"Setting hostname to {self.hostname}...")
+        print("Setting hostname to {self.hostname}...")
 
 class DNS:
-    def __init__(self, primary="::1", secondary="::1"):
+    def __init__(self, primary="127.0.0.1", secondary="::1"):
         self.primary = primary
         self.secondary = secondary
 
     def set_dns(self):
-        print("Setting DNS servers to primary and secondary localhost...")
+        print("Setting DNS servers to primary and secondary localhost addresses...")
 
 class Encryption:
     def __init__(self, method="AES-256", enable=True):
