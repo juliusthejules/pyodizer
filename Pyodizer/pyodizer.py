@@ -52,7 +52,7 @@ class Encryption:
         self.enable = enable
 
     def enable_encryption(self):
-        print(f"Enabling encryption with method {self.method}...")
+        print("Enabling encryption with method {self.method}...")
 
 class Traceroute:
     def __init__(self, block=True):
